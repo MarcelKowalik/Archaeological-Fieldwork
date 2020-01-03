@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,7 +10,9 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0"
+      tools:layout_editor_absoluteX="-16dp">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -29,89 +30,119 @@
           app:titleTextColor="@color/colorPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/appBarLayout"
+        android:layout_alignParentBottom="true">
 
-      <LinearLayout
-          android:layout_width="match_parent"
+
+      <Button
+          android:id="@+id/chooseImage"
+          android:layout_width="379dp"
           android:layout_height="wrap_content"
-          android:orientation="vertical">
+          android:layout_marginStart="13dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginEnd="19dp"
+          android:background="@color/colorAccent"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:text="@string/button_addImage"
+          android:textColor="@color/colorPrimary"
+          android:textSize="16sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/description" />
 
-        <EditText
-            android:id="@+id/hillfortTitle"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_margin="8dp"
-            android:autofillHints=""
-            android:hint="@string/hint_hillfortTitle"
-            android:inputType="text"
-            android:maxLength="25"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp" />
+      <Button
+          android:id="@+id/hillfortLocation"
+          android:layout_width="379dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="23dp"
+          android:layout_marginEnd="16dp"
+          android:background="@color/colorAccent"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:stateListAnimator="@null"
+          android:text="@string/button_location"
+          android:textColor="@color/colorPrimary"
+          android:textSize="16sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/hillfortImage" />
 
-        <EditText
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:hint="@string/hint_hillfortDescription"
-            android:inputType="text"
-            android:maxLength="25"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp"/>
+      <Button
+          android:id="@+id/btnAdd"
+          android:layout_width="379dp"
+          android:layout_height="48dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="19dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginBottom="16dp"
+          android:background="@color/colorAccent"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:stateListAnimator="@null"
+          android:text="@string/button_addHillfort"
+          android:textColor="@color/colorPrimary"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/hillfortLocation"
+          app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/chooseImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/colorAccent"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="@string/button_addImage"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp"/>
+      <EditText
+          android:id="@+id/description"
+          android:layout_width="394dp"
+          android:layout_height="82dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="9dp"
+          android:hint="@string/hint_hillfortDescription"
+          android:inputType="text"
+          android:maxLength="25"
+          android:maxLines="1"
+          android:padding="8dp"
+          android:textColor="@color/colorPrimaryDark"
+          android:textSize="14sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/hillfortTitle" />
 
-        <ImageView
-            android:id="@+id/hillfortImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"/>
+      <EditText
+          android:id="@+id/hillfortTitle"
+          android:layout_width="392dp"
+          android:layout_height="47dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="72dp"
+          android:autofillHints=""
+          android:hint="@string/hint_hillfortTitle"
+          android:inputType="text"
+          android:maxLength="25"
+          android:maxLines="1"
+          android:padding="8dp"
+          android:textColor="@color/colorPrimaryDark"
+          android:textSize="14sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/hillfortLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/colorAccent"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:stateListAnimator="@null"
-            android:text="@string/button_location"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp"/>
+      <ImageView
+          android:id="@+id/hillfortImage"
+          android:layout_width="393dp"
+          android:layout_height="150dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="22dp"
+          android:layout_marginEnd="5dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/chooseImage"
+          app:srcCompat="@mipmap/ic_launcher" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/colorAccent"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:stateListAnimator="@null"
-            android:text="@string/button_addHillfort"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
-      </LinearLayout>
-    </ScrollView>
 
   </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

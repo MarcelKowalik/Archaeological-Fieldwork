@@ -24,8 +24,8 @@ class HillfortMemStore : HillfortStore, AnkoLogger {
     logAll()
   }
 
-  override fun delete(placemark: HillfortModel) {
-    hillforts.remove(placemark)
+  override fun delete(hillfort: HillfortModel) {
+    hillforts.remove(hillfort)
   }
 
   override fun update(hillfort: HillfortModel) {
