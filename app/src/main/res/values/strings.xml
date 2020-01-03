@@ -1,0 +1,20 @@
+<resources>
+  <string name="app_name">Hillfort</string>
+  <string name="hint_hillfortTitle">Hillfort Title</string>
+  <string name="hint_hillfortDescription">Description </string>
+  <string name="button_addHillfort">Add Hillfort</string>
+  <string name="menu_addHillfort">Add</string>
+  <string name="menu_cancelHillfort">Cancel</string>
+  <string name="enter_hillfort_title"> Please enter a Hillfort Title </string>
+  <string name="save_hillfort"> Save Hillfort </string>
+  <string name="button_addImage"> Add Image </string>
+  <string name="select_hillfort_image">Select Hillfort image</string>
+  <string name="change_hillfort_image">Change Hillfort image</string>
+  <string name="button_location">Mark Location</string>
+  <string name="title_activity_map">Map</string>
+  <string name="menu_deleteHillfort">Delete</string>
+  <string name="title_activity_hillfort_maps">Map of All Hillforts </string>
+  <string name="hillfort_image_placeholder">Hillfort Image</string>
+  <string name="hillfort_title_placeholder">Hillfort Title</string>
+  <string name="hillfort_description_placeholder">Hillfort Description</string>
+</resources>
