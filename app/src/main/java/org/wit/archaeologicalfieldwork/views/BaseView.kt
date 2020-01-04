@@ -43,9 +43,10 @@ open abstract class BaseView() : AppCompatActivity(), AnkoLogger {
     return presenter
   }
 
-  fun init(toolbar: Toolbar) {
+  fun init(toolbar: Toolbar, upEnabled: Boolean) {
     toolbar.title = title
     setSupportActionBar(toolbar)
+    supportActionBar?.setDisplayHomeAsUpEnabled(upEnabled)
   }
 
   override fun onDestroy() {

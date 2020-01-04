@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.wit.archaeologicalfieldwork">
-    <!--
-           The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-           Google Maps Android API v2, but you must specify either coarse or fine
-           location permissions for the 'MyLocation' functionality.
-    -->
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -16,40 +12,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".views.map.HillfortMapView"
             android:label="@string/title_activity_hillfort_maps"
-            android:theme="@style/AppTheme"></activity>
-        <!--
-                 The API key for Google Maps-based APIs is defined as a string resource.
-                 (See the file "res/values/google_maps_api.xml").
-                 Note that the API key is linked to the encryption key used to sign the APK.
-                 You need a different API key for each encryption key, including the release key that is used to
-                 sign the APK for publishing.
-                 You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.hillfortlist.HillfortListView" />
+        </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
             android:name=".views.editlocation.EditLocationView"
-            android:label="@string/title_activity_map"></activity>
+            android:label="@string/title_activity_edit_location">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.hillfort.HillfortView" />
+        </activity>
 
 
-        <activity android:name=".views.hillfort.HillfortView" />
+        <activity android:name=".views.hillfort.HillfortView"
+            android:label="@string/title_activity_hillfort">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.hillfortlist.HillfortListView" />
+        </activity>
+
+
+
+
         <activity android:name=".views.hillfortlist.HillfortListView" />
         <activity
             android:name=".views.splashscreen.SplashScreenView"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Hillforts App"
             android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
     </application>
 
 </manifest>

@@ -18,4 +18,7 @@
   <string name="hillfort_title_placeholder">Hillfort Title</string>
   <string name="hillfort_description_placeholder">Hillfort Description</string>
   <string name="menu_saveHillfort">Save</string>
+  <string name="title_activity_hillfort_list">Hillforts</string>
+  <string name="title_activity_hillfort">Hillforts</string>
+  <string name="title_activity_edit_location">Hillforts</string>
 </resources>
