@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -36,7 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/appBarLayout"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
 
 
       <Button
@@ -56,31 +57,12 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/description" />
 
-      <Button
-          android:id="@+id/hillfortLocation"
-          android:layout_width="379dp"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          android:layout_marginTop="23dp"
-          android:layout_marginEnd="16dp"
-          android:background="@color/colorAccent"
-          android:paddingTop="8dp"
-          android:paddingBottom="8dp"
-          android:stateListAnimator="@null"
-          android:text="@string/button_location"
-          android:textColor="@color/colorPrimary"
-          android:textSize="16sp"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/hillfortImage" />
-
       <EditText
           android:id="@+id/description"
-          android:layout_width="394dp"
-          android:layout_height="82dp"
+          android:layout_width="249dp"
+          android:layout_height="62dp"
           android:layout_marginStart="8dp"
           android:layout_marginTop="8dp"
-          android:layout_marginEnd="9dp"
           android:hint="@string/hint_hillfortDescription"
           android:inputType="text"
           android:maxLength="25"
@@ -88,7 +70,7 @@
           android:padding="8dp"
           android:textColor="@color/colorPrimaryDark"
           android:textSize="14sp"
-          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/lat"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/hillfortTitle" />
 
@@ -96,7 +78,7 @@
           android:id="@+id/hillfortTitle"
           android:layout_width="392dp"
           android:layout_height="47dp"
-          android:layout_marginStart="10dp"
+          android:layout_marginStart="8dp"
           android:layout_marginTop="72dp"
           android:autofillHints=""
           android:hint="@string/hint_hillfortTitle"
@@ -107,7 +89,31 @@
           android:textColor="@color/colorPrimaryDark"
           android:textSize="14sp"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
+          app:layout_constraintTop_toTopOf="parent">
+        <requestFocus/>
+      </EditText>
+
+      <TextView
+          android:id="@+id/lat"
+          android:layout_width="95dp"
+          android:layout_height="19dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="32dp"
+          android:text="00.000000"
+          android:textAlignment="textEnd"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/hillfortTitle" />
+
+      <TextView
+          android:id="@+id/lng"
+          android:layout_width="92dp"
+          android:layout_height="19dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="32dp"
+          android:text="00.000000"
+          android:textAlignment="textEnd"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/lat" />
 
       <ImageView
           android:id="@+id/hillfortImage"
@@ -126,13 +132,12 @@
           android:layout_width="363dp"
           android:layout_height="162dp"
           android:layout_marginStart="180dp"
-          android:layout_marginTop="80dp"
           android:layout_marginEnd="181dp"
           android:layout_marginBottom="87dp"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/hillfortLocation" />
+          app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
