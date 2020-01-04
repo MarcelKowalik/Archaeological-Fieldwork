@@ -1,4 +1,4 @@
-package org.wit.archaeologicalfieldwork.activities
+package org.wit.archaeologicalfieldwork.views.editLocation
 
 import android.app.Activity
 import android.content.Intent
@@ -9,7 +9,7 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import org.wit.archaeologicalfieldwork.models.Location
 
-class EditLocationPresenter(val view: EditLocationActivity) {
+class EditLocationPresenter(val view: EditLocationView) {
 
     var location = Location()
 
@@ -20,7 +20,7 @@ class EditLocationPresenter(val view: EditLocationActivity) {
     fun initMap(map: GoogleMap) {
         val loc = LatLng(location.lat, location.lng)
         val options = MarkerOptions()
-            .title("Placemark")
+            .title("Hillfort")
             .snippet("GPS : " + loc.toString())
             .draggable(true)
             .position(loc)

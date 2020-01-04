@@ -17,9 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.HillfortMapsActivity"
+            android:name=".views.map.HillfortMapView"
             android:label="@string/title_activity_hillfort_maps"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme"></activity>
         <!--
                  The API key for Google Maps-based APIs is defined as a string resource.
                  (See the file "res/values/google_maps_api.xml").
@@ -33,14 +33,14 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.EditLocationActivity"
+            android:name=".views.editLocation.EditLocationView"
             android:label="@string/title_activity_map"></activity>
 
 
-        <activity android:name=".activities.HillfortActivity" />
-        <activity android:name=".activities.HillfortListActivity" />
+        <activity android:name=".views.hillfort.HillfortView" />
+        <activity android:name=".views.hillfortlist.HillfortListView" />
         <activity
-            android:name=".activities.SplashScreenActivity"
+            android:name=".views.splashscreen.SplashScreenView"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Hillforts App"
             android:theme="@style/AppTheme">

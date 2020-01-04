@@ -17,4 +17,5 @@
   <string name="hillfort_image_placeholder">Hillfort Image</string>
   <string name="hillfort_title_placeholder">Hillfort Title</string>
   <string name="hillfort_description_placeholder">Hillfort Description</string>
+  <string name="menu_saveHillfort">Save</string>
 </resources>
