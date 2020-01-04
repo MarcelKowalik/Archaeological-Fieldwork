@@ -1,4 +1,4 @@
-package org.wit.archaeologicalfieldwork.models
+package org.wit.archaeologicalfieldwork.models.json
 
 import android.content.Context
 import com.google.gson.Gson
@@ -6,6 +6,8 @@ import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import org.jetbrains.anko.AnkoLogger
 import org.wit.archaeologicalfieldwork.helpers.*
+import org.wit.archaeologicalfieldwork.models.HillfortModel
+import org.wit.archaeologicalfieldwork.models.HillfortStore
 import java.util.*
 
 val JSON_FILE = "hillforts.json"
@@ -63,7 +65,9 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
   }
 
   private fun serialize() {
-    val jsonString = gsonBuilder.toJson(hillforts, listType)
+    val jsonString = gsonBuilder.toJson(hillforts,
+      listType
+    )
     write(context, JSON_FILE, jsonString)
   }
 

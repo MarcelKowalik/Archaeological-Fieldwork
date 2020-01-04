@@ -1,30 +1,12 @@
-//package org.wit.archaeologicalfieldwork.main
-//
-//import android.app.Application
-//import org.jetbrains.anko.AnkoLogger
-//import org.jetbrains.anko.info
-//import org.wit.archaeologicalfieldwork.models.HillfortMemStore
-//
-//
-//class MainApp : Application(), AnkoLogger {
-//
-//  val hillforts = HillfortMemStore()
-//
-//  override fun onCreate() {
-//    super.onCreate()
-//    info("Hilforts started")
-//  }
-//}
-
 
 package org.wit.archaeologicalfieldwork.main
 
 import android.app.Application
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
-import org.wit.archaeologicalfieldwork.models.HillfortJSONStore
-import org.wit.archaeologicalfieldwork.models.HillfortMemStore
+import org.wit.archaeologicalfieldwork.models.mem.HillfortMemStore
 import org.wit.archaeologicalfieldwork.models.HillfortStore
+import org.wit.archaeologicalfieldwork.room.HillfortStoreRoom
 
 class MainApp : Application(), AnkoLogger {
 
@@ -33,7 +15,8 @@ class MainApp : Application(), AnkoLogger {
   override fun onCreate() {
     super.onCreate()
     //hillforts = HillfortJSONStore(applicationContext)
-    hillforts = HillfortMemStore()
+    //hillforts = HillfortMemStore()
+    hillforts = HillfortStoreRoom(applicationContext)
     info("Hillforts started")
   }
 }

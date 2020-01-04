@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: "kotlin-kapt"
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -34,6 +36,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation "com.google.android.gms:play-services-location:17.0.0"
     implementation "com.google.code.gson:gson:2.8.5"
+    implementation 'androidx.room:room-runtime:2.1.0'
+    kapt 'androidx.room:room-compiler:2.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

@@ -1,7 +1,8 @@
-package org.wit.archaeologicalfieldwork.models
+package org.wit.archaeologicalfieldwork.models.mem
 
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
+import org.wit.archaeologicalfieldwork.models.HillfortModel
 import org.wit.archaeologicalfieldwork.models.HillfortStore
 
 var lastId = 0L

@@ -1,11 +1,13 @@
 package org.wit.archaeologicalfieldwork.models
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-
 @Parcelize
-data class HillfortModel(var id: Long = 0,
+@Entity
+data class HillfortModel(@PrimaryKey(autoGenerate = true) var id: Long = 0,
                           var title: String = "",
                           var description: String = "",
                           var image: String = "",
