@@ -33,7 +33,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".views.editLocation.EditLocationView"
+            android:name=".views.editlocation.EditLocationView"
             android:label="@string/title_activity_map"></activity>
 
 

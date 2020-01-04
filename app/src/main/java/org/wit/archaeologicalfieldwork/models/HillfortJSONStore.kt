@@ -38,11 +38,6 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
     serialize()
   }
 
-  override fun delete(hillfort: HillfortModel) {
-    hillforts.remove(hillfort)
-    serialize()
-  }
-
   override fun update(hillfort: HillfortModel) {
     val hillfortsList = findAll() as ArrayList<HillfortModel>
     var foundHillfort: HillfortModel? = hillfortsList.find { p -> p.id == hillfort.id }
@@ -55,6 +50,16 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
       foundHillfort.zoom = hillfort.zoom
     }
     serialize()
+  }
+
+  override fun delete(hillfort: HillfortModel) {
+    hillforts.remove(hillfort)
+    serialize()
+  }
+
+  override fun findById(id:Long) : HillfortModel? {
+    val foundHillfort: HillfortModel? = hillforts.find { it.id == id }
+    return foundHillfort
   }
 
   private fun serialize() {
