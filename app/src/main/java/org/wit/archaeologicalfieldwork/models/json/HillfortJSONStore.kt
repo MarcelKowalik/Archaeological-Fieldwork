@@ -47,9 +47,7 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
       foundHillfort.title = hillfort.title
       foundHillfort.description = hillfort.description
       foundHillfort.image = hillfort.image
-      foundHillfort.lat = hillfort.lat
-      foundHillfort.lng = hillfort.lng
-      foundHillfort.zoom = hillfort.zoom
+      foundHillfort.location = hillfort.location
     }
     serialize()
   }
@@ -74,5 +72,8 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
   private fun deserialize() {
     val jsonString = read(context, JSON_FILE)
     hillforts = Gson().fromJson(jsonString, listType)
+  }
+  override fun clear() {
+    hillforts.clear()
   }
 }

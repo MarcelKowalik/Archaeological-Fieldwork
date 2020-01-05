@@ -6,6 +6,7 @@ import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.wit.archaeologicalfieldwork.models.mem.HillfortMemStore
 import org.wit.archaeologicalfieldwork.models.HillfortStore
+import org.wit.archaeologicalfieldwork.models.firebase.HillfortFireStore
 import org.wit.archaeologicalfieldwork.room.HillfortStoreRoom
 
 class MainApp : Application(), AnkoLogger {
@@ -16,7 +17,8 @@ class MainApp : Application(), AnkoLogger {
     super.onCreate()
     //hillforts = HillfortJSONStore(applicationContext)
     //hillforts = HillfortMemStore()
-    hillforts = HillfortStoreRoom(applicationContext)
+    //hillforts = HillfortStoreRoom(applicationContext)
+    hillforts = HillfortFireStore(applicationContext)
     info("Hillforts started")
   }
 }

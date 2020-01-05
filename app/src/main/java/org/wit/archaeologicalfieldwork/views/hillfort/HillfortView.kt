@@ -10,6 +10,7 @@ import org.jetbrains.anko.toast
 import org.wit.archaeologicalfieldwork.R
 import org.wit.archaeologicalfieldwork.helpers.readImageFromPath
 import org.wit.archaeologicalfieldwork.models.HillfortModel
+import org.wit.archaeologicalfieldwork.models.Location
 import org.wit.archaeologicalfieldwork.views.BaseView
 
 class HillfortView : BaseView(), AnkoLogger {
@@ -40,9 +41,14 @@ class HillfortView : BaseView(), AnkoLogger {
         if (hillfort.image != null) {
             chooseImage.setText(R.string.change_hillfort_image)
         }
-        lat.setText("%.6f".format(hillfort.lat))
-        lng.setText("%.6f".format(hillfort.lng))
+        this.showLocation(hillfort.location)
     }
+
+    override fun showLocation(location: Location) {
+        lat.setText("%.6f".format(location.lat))
+        lng.setText("%.6f".format(location.lng))
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_hillfort, menu)

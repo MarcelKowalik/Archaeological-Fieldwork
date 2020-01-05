@@ -21,4 +21,7 @@
   <string name="title_activity_hillfort_list">Hillforts</string>
   <string name="title_activity_hillfort">Hillforts</string>
   <string name="title_activity_edit_location">Hillforts</string>
+  <string name="title_activity_login"> Signup/Login to Hillforts</string>
+  <string name="menu_showMap">Show Map</string>
+  <string name="menu_logout">Logout</string>
 </resources>

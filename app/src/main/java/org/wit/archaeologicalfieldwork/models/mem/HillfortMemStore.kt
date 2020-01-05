@@ -35,9 +35,7 @@ class HillfortMemStore : HillfortStore, AnkoLogger {
       foundHillfort.title = hillfort.title
       foundHillfort.description = hillfort.description
       foundHillfort.image = hillfort.image
-      foundHillfort.lat = hillfort.lat
-      foundHillfort.lng = hillfort.lng
-      foundHillfort.zoom = hillfort.zoom
+      foundHillfort.location = hillfort.location
       logAll();
     }
   }
@@ -47,7 +45,12 @@ class HillfortMemStore : HillfortStore, AnkoLogger {
     return foundHillfort
   }
 
+  override fun clear() {
+    hillforts.clear()
+  }
+
   internal fun logAll() {
     hillforts.forEach { info("${it}") }
   }
+
 }
