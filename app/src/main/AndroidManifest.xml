@@ -44,6 +44,16 @@
                 android:value=".views.hillfort.HillfortView" />
         </activity>
 
+        <activity
+            android:name=".views.splashscreen.SplashScreenView"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Hillforts App"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".views.hillfort.HillfortView"
             android:label="@string/title_activity_hillfort">
@@ -57,19 +67,6 @@
             android:launchMode="singleTop">
         </activity>
 
-
-        <!--000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
-        <activity
-            android:name=".views.splashscreen.SplashScreenView"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="Hillforts App"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!--000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
     </application>
 
 </manifest>
